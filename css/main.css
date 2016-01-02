@@ -1,0 +1,154 @@
+html {
+    background: url("/images/background_main.jpg") center center no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+
+#primary {
+    width: 700px;
+    margin: 0 auto;
+    color: #7f388b;
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 400;
+}
+
+.de-logo {
+    margin: 30px 0 20px 0;
+}
+
+.seperator {
+    margin: 30px 190px;
+    border-top: 1px solid #FFF;
+}
+
+h2 {
+    font-size: 26px;
+    line-height: 34px;
+}
+
+.linkicon {
+    width: 128px;
+    height: 128px;
+    display: inline-block;
+    margin: 0 20px 0 0;
+    filter: alpha(opacity=40); /* IE */
+    -moz-opacity: 0.40; /* Mozilla */
+    opacity: 0.40; /* Opera */
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.linkicon:hover {
+    filter: alpha(opacity=1); /* IE */
+    -moz-opacity: 1.0; /* Mozilla */
+    opacity: 1.0; /* Opera */
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.statusicon {
+    background: url("/icons/status.png") no-repeat;
+}
+
+.announcementicon {
+    background: url("/icons/announcement.png") no-repeat;
+}
+
+.mailicon {
+    background: url("/icons/mail.png") no-repeat;
+}
+
+.lasticon {
+    margin: 0;
+}
+
+@media (max-width: 600px) {
+
+    #primary {
+        width: 90%;
+        margin: 0 5%;
+    }
+
+    #primary img {
+        width: 90%;
+        margin: 50px 5% 30px 5%;
+    }
+
+    .seperator {
+        margin: 60px 20px;
+        border-top: 1px solid #FFF;
+        display: none;
+    }
+
+    html {
+        background: none;
+    }
+
+    body {
+        background: url("/images/background_main.jpg") center center no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    h2 {
+        font-size: 20px;
+        line-height: 26px;
+        margin: 30px 0 50px 0;
+    }
+}
+
+a.tooltip {
+    position: relative;
+    text-decoration: none;
+}
+
+a.tooltip:after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 130%;
+    left: 20%;
+    background: #bacc00;
+    padding: 5px 15px;
+    color: #7f388b;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    white-space: nowrap;
+    opacity: 0;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+
+a.tooltip:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-top: 20px solid #bacc00;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    opacity: 0;
+    left: 30%;
+    bottom: 90%;
+}
+
+a.tooltip:hover:after {
+    bottom: 100%;
+}
+
+a.tooltip:hover:before {
+    bottom: 70%;
+}
+
+a.tooltip:hover:after, a:hover:before {
+    opacity: 1;
+}
